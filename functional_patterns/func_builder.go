@@ -46,6 +46,8 @@ func newServer(opt ...OptFunc) *Server {
 
 func main() {
 	server := newServer(withTLS, setId("MyId"))
+
+	fmt.Printf("%+v\n", server)
 	fmt.Println(server.Opts.id)
 	fmt.Println(server.Opts.maxConn)
 	fmt.Println(server.Opts.tls)
